@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <main>
-      <div className="flex flex-row justify-around bg-slate-100 p-4">
+      <div className="flex flex-row justify-around bg-black p-4">
         <div className="flex flex-col">
           <p className="text-4xl font-semibold">Find Your Way</p>
           <hr className="border-t-2 mb-4 mt-1 border-orange-700" />
