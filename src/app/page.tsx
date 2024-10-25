@@ -1,5 +1,6 @@
 // import Image from "next/image";
 
+import AlternatingSections from "./components/ui/AlternatingSections";
 import Colorselect from "./components/ui/colorselect";
 import Landing from "./components/ui/landing/landing";
 import Product from "./components/ui/product";
@@ -14,6 +15,7 @@ export default function Home() {
       <Colorselect />
       <Product/>
       <TwoVisionSection/>
+      <AlternatingSections/>
     </>
   );
 }
