@@ -21,13 +21,13 @@ export default function Footer() {
             href="/pages/CodePortfolio"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
-            <p>Code Portfolio</p>
+            <p>Color</p>
           </Link>
           <Link
             href="/pages/DesignPortfolio"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
-            <p>Design Portfolio</p>
+            <p>Explore</p>
           </Link>
           <Link
             href="/pages/Contact"
@@ -39,7 +39,7 @@ export default function Footer() {
             href="/pages/Resume"
             className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
           >
-            <p>Resume</p>
+            <p>products</p>
           </Link>
         </div>
         <div className="flex flex-col items-center">

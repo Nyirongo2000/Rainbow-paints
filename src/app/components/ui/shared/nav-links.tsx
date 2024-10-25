@@ -4,10 +4,10 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "BusSelection", href: "/pages/BusSelection" },
-  { name: "My Bookings", href: "/pages/BookingProfile" },
+  { name: "products", href: "/pages/BusSelection" },
+  { name: "color", href: "/pages/BookingProfile" },
   { name: "Contact", href: "/pages/Contactus" },
-  { name: "Login/SignUp", href: "/pages/Auth" },
+  { name: "explore", href: "/pages/Auth" },
 ];
 
 export default function NavLinks() {
