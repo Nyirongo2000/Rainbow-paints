@@ -70,14 +70,14 @@ const Product: React.FC = () => {
   }, []);
 
   return (
-    <main className="bg-[#f1b724] min-h-fill py-10 px-5 ">
+    <main className="bg-[#f1b724] min-h-full  py-10 px-2 ">
       <h1 className="text-center text-2xl font-bold mb-5">Trending Products</h1>
 
       {/* Horizontal scrolling container with snap behavior */}
       <div className="relative">
         <div
           ref={containerRef}
-          className="flex overflow-x-auto snap-x snap-mandatory space-x-4 p-4 scrollbar-hide scroll-smooth"
+          className="flex overflow-x-auto snap-x snap-mandatory space-x-4 p-4 scrollbar-hide scroll-smooth justify-center"
         >
           {cards.map((card, index) => (
             <div
@@ -96,7 +96,9 @@ const Product: React.FC = () => {
                   height={400} // Add height to avoid the error
                 />
               </div>
-              <p className="text-sm text-gray-700">{card.description}</p>
+              <p className="text-sm text-gray-700 text-center">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>
@@ -123,7 +125,7 @@ const Product: React.FC = () => {
           ◀
         </button>
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full hover:bg-gray-300 focus:outline-none"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2  bg-gray-600 p-2 rounded-full hover:bg-gray-300 focus:outline-none"
           onClick={() =>
             scrollToCard(Math.min(activeIndex + 1, cards.length - 1))
           }

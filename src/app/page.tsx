@@ -3,6 +3,7 @@
 import Colorselect from "./components/ui/colorselect";
 import Landing from "./components/ui/landing/landing";
 import Product from "./components/ui/product";
+import TwoVisionSection from "./components/ui/twovisionsection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <Colorselect />
       <Product/>
+      <TwoVisionSection/>
     </>
   );
 }
