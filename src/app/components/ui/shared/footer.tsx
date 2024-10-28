@@ -6,14 +6,14 @@ import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <main>
-      <div className="flex flex-row justify-around bg-black p-4">
+      <div className="flex flex-row text-black justify-around bg-white p-4">
         <div className="flex flex-col">
           <p className="text-4xl font-semibold">Find Your Way</p>
           <hr className="border-t-2 mb-4 mt-1 border-orange-700" />
 
           <Link
             href="/"
-            className="flex w-full text-sm font-medium hover:text-blue-600 md:text-base"
+            className="flex w-full text-black text-sm font-medium hover:text-blue-600 md:text-base"
           >
             <p>Home</p>
           </Link>

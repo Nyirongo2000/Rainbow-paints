@@ -23,7 +23,7 @@ const ContactUs: React.FC = () => {
           <div className="flex-1 md:w-1/2">
             <form className="space-y-4">
               {/* Name and Email on the Same Line */}
-              <div className="flex flex-col md:flex-row md:space-x-4">
+              <div className="flex flex-col md:flex-row md:space-x-2">
                 <div className="flex-1">
                   <label htmlFor="name" className="block text-gray-700">
                     Name

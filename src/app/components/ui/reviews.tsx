@@ -27,8 +27,10 @@ const reviews = [
 
 const CustomerShowcase: React.FC = () => {
   return (
-    <div className="bg-[#A2E3F5] p-6">
-      <h2 className="text-3xl font-bold text-center mb-6">Customer Reviews</h2>
+    <div className="bg-[#A2E3F5] text-black p-6">
+      <h2 className="text-3xl font-bold text-black text-center mb-6">
+        Customer Reviews
+      </h2>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {reviews.map((review, index) => (
           <div key={index} className="bg-white p-4 rounded-lg shadow-md">
