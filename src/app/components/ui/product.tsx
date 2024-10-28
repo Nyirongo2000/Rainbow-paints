@@ -9,26 +9,25 @@ type Card = {
 };
 
 const Product: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active card
   const containerRef = useRef<HTMLDivElement>(null);
 
   // An array of card data with image URLs and descriptions
   const cards: Card[] = [
     {
-      image: "/product/product1 (2.webp",
-      description: "This is the description for Card 1",
+      image: "/product/product1 (4).webp",
+      description: "This is the description for Card 4",
     },
     {
       image: "/product/product1.webp",
       description: "This is the description for Card 2",
     },
     {
-      image: "/product/product1 (2.webp",
-      description: "This is the description for Card 1",
+      image: "/product/product1 (3).webp",
+      description: "This is the description for Card 3",
     },
     {
-      image: "/product/product1 (4).webp",
-      description: "This is the description for Card 3",
+      image: "/product/product1.webp",
+      description: "This is the description for Card 2",
     },
     {
       image: "/product/product1 (4).webp",
@@ -36,7 +35,10 @@ const Product: React.FC = () => {
     },
   ];
 
-  // Scroll to the card based on active index
+  const initialIndex = Math.floor(cards.length / 2); // Start with the center card
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
+
+  // Scroll to the active card based on index
   const scrollToCard = (index: number) => {
     if (containerRef.current) {
       const cardWidth = containerRef.current.clientWidth;
@@ -44,7 +46,7 @@ const Product: React.FC = () => {
         left: index * cardWidth,
         behavior: "smooth",
       });
-      setActiveIndex(index); // Update active card on dot click
+      setActiveIndex(index);
     }
   };
 
@@ -58,7 +60,9 @@ const Product: React.FC = () => {
     }
   };
 
+  // Center the initial active card on first render
   useEffect(() => {
+    scrollToCard(initialIndex);
     if (containerRef.current) {
       containerRef.current.addEventListener("scroll", handleScroll);
     }
@@ -70,10 +74,9 @@ const Product: React.FC = () => {
   }, []);
 
   return (
-    <main className="bg-[#f1b724] min-h-full  py-10 px-2 ">
+    <main className="bg-[#f1b724] min-h-full py-10 px-2">
       <h1 className="text-center text-2xl font-bold mb-5">Trending Products</h1>
 
-      {/* Horizontal scrolling container with snap behavior */}
       <div className="relative">
         <div
           ref={containerRef}
@@ -86,14 +89,13 @@ const Product: React.FC = () => {
                 index === activeIndex ? "scale-110" : "scale-90"
               }`}
             >
-              {/* Image container with white space */}
               <div className="w-full h-40 bg-white flex items-center justify-center rounded-md mb-3">
                 <Image
                   src={card.image}
                   alt={`Card ${index + 1}`}
                   className="object-contain w-full h-full"
-                  width={800} // Set width for optimization
-                  height={400} // Add height to avoid the error
+                  width={800}
+                  height={400}
                 />
               </div>
               <p className="text-sm text-gray-700 text-center">
@@ -103,7 +105,6 @@ const Product: React.FC = () => {
           ))}
         </div>
 
-        {/* Dots navigation */}
         <div className="flex justify-center mt-4 p-10">
           {cards.map((_, index) => (
             <button
@@ -117,7 +118,6 @@ const Product: React.FC = () => {
           ))}
         </div>
 
-        {/* Optional: Left and Right Scroll buttons */}
         <button
           className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full hover:bg-gray-300 focus:outline-none"
           onClick={() => scrollToCard(Math.max(activeIndex - 1, 0))}
@@ -125,7 +125,7 @@ const Product: React.FC = () => {
           ◀
         </button>
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2  bg-gray-600 p-2 rounded-full hover:bg-gray-300 focus:outline-none"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full hover:bg-gray-300 focus:outline-none"
           onClick={() =>
             scrollToCard(Math.min(activeIndex + 1, cards.length - 1))
           }

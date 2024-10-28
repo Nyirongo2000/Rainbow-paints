@@ -6,14 +6,13 @@ const ContactUs: React.FC = () => {
   return (
     <main className="bg-[#A2E3F5]  p-6">
       <div className="max-w-5xl mx-auto bg-[#409D76] rounded-lg shadow-md p-8">
-        <h1 className="text-3xl text-black font-bold mb-6">
-          Book a Free Site Visit
-        </h1>
-        <div className="flex flex-col md:flex-row items-start justify-between bg-[#409D76] text-white">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-[#409D76] text-white">
           {/* Left Side - Title */}
-          <div className="flex-1 md:w-1/2 mb-4 md:mb-0">
-            <h2 className="text-xl font-semibold">Get in Touch</h2>
-            <p className="text-gray-600 mt-2">
+          <div className="flex-1 md:w-1/2 mb-2 md:mb-0">
+            <h2 className="text-5xl text-black font-bold items-center">
+              Book a Free <br/>Site Visit
+            </h2>
+            <p className="text-white mt-2 ">
               Fill out the form to schedule a free site visit. We look forward
               to assisting you!
             </p>
@@ -21,11 +20,11 @@ const ContactUs: React.FC = () => {
 
           {/* Right Side - Input Forms */}
           <div className="flex-1 md:w-1/2">
-            <form className="space-y-4">
+            <form className="space-y-1">
               {/* Name and Email on the Same Line */}
               <div className="flex flex-col md:flex-row md:space-x-2">
                 <div className="flex-1">
-                  <label htmlFor="name" className="block text-gray-700">
+                  <label htmlFor="name" className="block text-black">
                     Name
                   </label>
                   <input
@@ -37,7 +36,7 @@ const ContactUs: React.FC = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="email" className="block text-gray-700">
+                  <label htmlFor="email" className="block text-black">
                     Email
                   </label>
                   <input
@@ -50,7 +49,7 @@ const ContactUs: React.FC = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="phone" className="block text-gray-700">
+                <label htmlFor="phone" className="block text-black">
                   Phone Number
                 </label>
                 <input
@@ -62,7 +61,7 @@ const ContactUs: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-700">
+                <label htmlFor="message" className="block text-black">
                   Message
                 </label>
                 <textarea

@@ -9,10 +9,10 @@ type ColorSet = {
 const Colorselect = () => {
   // List of favorite colors (base color for buttons)
   const favoriteColors: ColorSet[] = [
-    { base: "Tomato", shades: ["#FF7F50", "#FF4500", "#FF6347"] }, // Tomato
-    { base: "Steel Blue", shades: ["#5F9EA0", "#6495ED", "#4682B4"] }, // Steel Blue
-    { base: "Lime Green", shades: ["#66CDAA", "#3CB371", "#32CD32"] }, // Lime Green
-    { base: "Gold", shades: ["#FFEC8B", "#FFD700", "#FFA500"] }, // Gold
+    { base: "Red", shades: ["#FF7F50", "#FF4500", "#FF6347"] }, 
+    { base: "Blue", shades: ["#5F9EA0", "#6495ED", "#4682B4"] }, 
+    { base: "Green", shades: ["#66CDAA", "#3CB371", "#32CD32"] }, 
+    { base: "Gold", shades: ["#FFEC8B", "#FFD700", "#FFA500"] }, 
   ];
 
   // State to track the selected shades for the three boxes
